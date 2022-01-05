@@ -8,13 +8,11 @@ export default function AllRoutes()
     return (<div>
         <Switch>
         {/* <Route exact path="/"><Home /></Route> */}
-        <Route exact path="/login"><Login /></Route>
+        <Route path="/login"><Login /></Route>
         {/* <Route exact path="/search"><Search /></Route> */}
-        <Route exact path="/search/:user"><Search /></Route>
-        <PrivateRoutes exact={false} path="/search">
-            <Search />
-            
-            </PrivateRoutes>
+        <PrivateRoutes exact={true} path="/search/:users"><Search /></PrivateRoutes>
+
+        <PrivateRoutes exact={true} path="/search"><Search /></PrivateRoutes>
             <PrivateRoutes exact={true} path="/">
             <Home />
             

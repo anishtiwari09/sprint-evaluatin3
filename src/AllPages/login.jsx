@@ -3,8 +3,7 @@ import {Redirect} from "react-router-dom"
 import { getUserLogin } from "../Redux/Auth/action"
 export default function Login()
 {
-    const {isAuth}=useSelector(state=>state)
-    console.log(isAuth)
+    const {isAuth}=useSelector(state=>state.auth)
     const dispatch=useDispatch()
     const handleLogin=()=>{
         dispatch(getUserLogin())

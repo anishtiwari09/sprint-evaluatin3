@@ -1,9 +1,9 @@
-import { actionType } from "./actionContraint";
+import { actionType } from "./actionContraint"
 
 export const getdataSuccess=(data)=>({
     type:actionType.GET_DATA_SUCCESS,
     payload:{
-        item:data.item,
+        item:data.items,
         totalPage:data.total_count
     },
     isLoading:false,

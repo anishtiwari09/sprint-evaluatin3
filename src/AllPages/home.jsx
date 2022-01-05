@@ -11,12 +11,8 @@ const handleLogout=()=>
     dispatch(getUserLogout())
 }
 const history=useHistory()
-const getSearchData=()=>{
-return fetch(`https://api.github.com/search/repositories?q=masai&page=2&per_page=4`).then(res=>res.json()).catch(err=>{
-    console.log(err)
-})
-}
-const handleSearch=async ()=>{
+
+const handleSearch= ()=>{
     let url=`/search/q=${text}`
     history.push(url)
 }
@@ -29,7 +25,7 @@ return <div>
         <h3>Home</h3>
         <div>
             <div>
-            <input type="search" placeholder="|Search Repository" value={text} onChange={(e)=>setText(e.target.value)} />
+            <input type="search" placeholder="Search Repository" value={text} onChange={(e)=>setText(e.target.value)} />
             
                 <button onClick={handleSearch}>Search</button>
             

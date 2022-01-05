@@ -3,17 +3,17 @@ import {
     AppBar,Toolbar,IconButton,Typography
   } from "@material-ui/core";
 export default function Navbar(){
-    return <>
+    return <div style={{display:"flex",justifyContent:"center",gap:"1rem",padding:"0.9rem"}}>
         {/* <Link>Home</Link> */}
 <div>
-<Link to="/">Home</Link>
+<Link to="/" style={{fontSize:"20px"}}>Home</Link>
 </div>
 <div>
-<Link to="/login">Login</Link>
+<Link to="/login" style={{fontSize:"20px"}}>Login</Link>
 </div>
 <div>
-<Link to="/search">Search</Link>
+<Link to="/search" style={{fontSize:"20px"}}>Search</Link>
 </div>
         
-    </>
+    </div>
 }
